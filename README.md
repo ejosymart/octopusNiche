@@ -18,11 +18,17 @@ Nevertheless, you need to download maxent sofware from https://biodiversityinfor
 Example of the structure:
 
 code
+
 dataset
+
 G_variables
+
 M_variables
+
 **maxent**
+
 octopusNiche.Rproj
+
 README.md
 
 
