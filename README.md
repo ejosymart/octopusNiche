@@ -13,6 +13,18 @@ In order to replicate the results, open the octopusNiche.Rproj and you have to f
 
 All the scripts have comments for an easy understanding of the process.
 
+Nevertheless, you need to download maxent sofware from https://biodiversityinformatics.amnh.org/open_source/maxent/. After that **you have to create a folder named maxent**, inside this folder there will be: **maxent.bat, maxent.jar, maxent.sh, readme.txt**.
+
+Example of the structure:
+
+code
+dataset
+G_variables
+M_variables
+**maxent**
+octopusNiche.Rproj
+README.md
+
 
 If you want to replicate the maps or other plots of the paper, contact to Luis Angeles-González (luis.angeles0612@gmail.com) or Josymar Torrejón Magallanes (ejosymart@gmail.com).
 
