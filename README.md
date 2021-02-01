@@ -32,6 +32,6 @@ octopusNiche.Rproj
 README.md
 
 
-If you want to replicate the maps or other plots of the paper, contact to Luis Angeles-González (luis.angeles0612@gmail.com) or Josymar Torrejón Magallanes (ejosymart@gmail.com).
+If you want to replicate the maps or other plots of the paper, contact to Luis Enrique Angeles-González (luis.angeles0612@gmail.com) or Josymar Torrejón Magallanes (ejosymart@gmail.com).
 
 If you find any problem in the code, please add this at the Issues section of the github.
