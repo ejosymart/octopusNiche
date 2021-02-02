@@ -3,6 +3,8 @@ Code and data input to replicate the article "Effect of climate change in the di
 
 In order to replicate the results, open the octopusNiche.Rproj and you have to follow the order provided in the code folder:
 
+0) 0_auxiliar_functions.R (You do not need to run this code. It will be called from the following scripts).
+
 1) 1_niche_model_maxent.R
 
 2) 2_binary_maps.R
