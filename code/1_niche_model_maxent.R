@@ -1,4 +1,4 @@
-# To install kuenm uncomment the folowing lines
+# To install kuenm following the next steps
 # install_packages("devtools")
 # library(devtools)
 # devtools::install_github("marlonecobos/kuenm")
