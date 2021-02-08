@@ -1,5 +1,5 @@
 # octopusNiche
-Code and data input to replicate the article "Effect of climate change in the distribution of Octopus maya in the Yucatan Peninsula, Gulf of Mexico: a multiple integrative approach"
+Code and data input to replicate the article "Climate change effect on Octopus maya distribution in the Yucatan Peninsula, Gulf of Mexico: A multiple integrative approach"
 
 In order to replicate the results, open the octopusNiche.Rproj and you have to follow the order provided in the code folder:
 
