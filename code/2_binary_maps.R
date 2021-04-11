@@ -1,3 +1,4 @@
+# If you do not have installed pacman, delete the folowing line.
 # install.packages("pacman")
 
 library(pacman)

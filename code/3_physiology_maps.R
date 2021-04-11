@@ -10,7 +10,7 @@ list_files  <- list.files(path ='dataset/asc_files/Physiology_presence/Benthic_m
 stack_files <- stack(list_files)
 
 
-# Identifier  to generate figures in the correct order
+# Identifier to generate figures in the correct order
 # notice that for each scenario the id is repeated two times
 num <- (rep(1:9, each=2))
 
