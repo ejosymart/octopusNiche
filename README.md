@@ -1,5 +1,5 @@
 # octopusNiche
-Code and data input to replicate the article "Climate change effect on Octopus maya distribution in the Yucatan Peninsula, Gulf of Mexico: A multiple integrative approach" (In review: Estuarine, Coastal and Shelf Science journal)
+Code and data input to replicate the article "Climate change effect on Octopus maya (Voss and Solís-Ramírez, 1966) distribution in the Yucatan Peninsula, Gulf of Mexico: A correlative and mechanistic approach" (In review: Estuarine, Coastal and Shelf Science journal)
 
 In order to replicate the results, open the octopusNiche.Rproj and you have to follow the order provided in the code folder:
 
@@ -11,11 +11,9 @@ In order to replicate the results, open the octopusNiche.Rproj and you have to f
 
 * 3) 3_physiology_maps.R
 
-* 4) 4_cut_count.R
-
 All the scripts have comments for an easy understanding of the process.
 
-Nevertheless, you need to download maxent sofware from https://biodiversityinformatics.amnh.org/open_source/maxent/. After that **you have to create a folder named maxent**, inside this folder there will be: **maxent.bat, maxent.jar, maxent.sh, readme.txt**.
+Nevertheless, you need to download maxent software from: https://biodiversityinformatics.amnh.org/open_source/maxent/. After that **you have to create a folder named maxent**, inside this folder there will be: **maxent.bat, maxent.jar, maxent.sh, readme.txt**.
 
 Also, you need to install *kuenm* package. Please follow the instructions provided in this link: https://github.com/marlonecobos/kuenm
 
@@ -43,4 +41,3 @@ For Mac users: Before install the kuenm package, follow these instructions to in
 Xcode will replace RTools.
 
 If you find any problem in the code, please add this at the Issues section of the github.
-

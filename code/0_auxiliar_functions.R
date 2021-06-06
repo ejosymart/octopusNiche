@@ -1,3 +1,7 @@
+# -------------------------------------------------------------------------
+# Functions for analyses --------------------------------------------------
+# -------------------------------------------------------------------------
+
 binary_map <- function(fileSuitability, filePresence, prop, ...){
   
   model       <- raster::raster(fileSuitability)
@@ -41,60 +45,36 @@ bin_scenarios <- function(binmodel, stack_files_RCP, folder_name){
 }
 
 
-Thermal_maps <- function(Sta, opt_min, opt_max, pej_min, pej_max, species, folder_name){
+Temp_fit <- function(pejus_min, optimum_min, mean, optimum_max, pejus_max, stack, folder_name, ...){
   
-  Sta_opt <- raster::reclassify(Sta, c(opt_min, opt_max, 1))
-  Sta_opt[Sta_opt!= 1] <- 0
+  options(warn=-1)
+  newdir <- paste0('Final_Models/', folder_name)
+  dir.create(newdir)
   
-  Sta_pej <- raster::reclassify(Sta, c(pej_min, pej_max, 1))
-  Sta_pej[Sta_pej!= 1] <- 0
-  
-  #Create new folder
-  dir.create(paste0("Final_Models/", folder_name))
-  setwd(paste0("Final_Models/", folder_name))
-  
-  for(i in seq(1, dim(Sta)[3], 2)){
+  # GAM analysis
+  dat <- data.frame(x = c(pejus_min, optimum_min, mean, optimum_max, pejus_max), y=c(0, 0.75, 1 ,0.75, 0))
+  plot.new() # Mandatory
+  res <- xspline(dat$x, dat$y, -0.5, draw=FALSE)
+  tem <- res$x
+  fit <- res$y
+  phy <- data.frame(cbind(tem, fit))
+  gam_fit <- gam(fit ~ s(tem, k = 15),
+                 data = phy, method = "REML", family = "gaussian")
+ 
+  # Projection
+  for(i in 1:length(names(stack))){
+    # Suitability maps
+    f   <- paste0(names(stack[[i]]), '.asc')
+    ras <- stack[[i]] 
+    names(ras)   <- 'tem'
+    pre <- predict(ras, gam_fit, family=gaussian, type="response", scale=TRUE)
+    pre[pre < 0] <- 0
+    pre <- pre/pre@data@max #relativizing values
+    writeRaster(pre, filename = paste0(newdir,'/',f), overwrite=TRUE) 
     
-    #Optimum
-    Sum_opt <- Sta_opt[[i]] + Sta_opt[[i+1]]
-    Sum_opt[Sum_opt != 2] <- 0
-    Sum_opt[Sum_opt == 2] <- 1
-    
-    f1 <- paste0(num[i],"_", species,"_","_", Scenarios[i], '.tif')
-    
-    #Saving raster file for optimum temperature
-    writeRaster(Sum_opt, filename = f1 , overwrite = TRUE)
-    
-    #Pejus
-    Sum_pej <- Sta_pej[[i]] + Sta_pej[[i+1]]
-    Sum_pej[Sum_pej != 2] <- 0
-    Sum_pej[Sum_pej == 2] <- 1
-    
-    #Calculating pejus from optimum overlap
-    Sum_pej <- Sum_opt + Sum_pej
-    Sum_pej[Sum_pej==2] <- 0
-    f2 <- paste0(num[i],"_", species,"_","_", Scenarios[i+1], '.tif')
-    
-    
-    #Saving raster file for pejus temperature
-    writeRaster(Sum_pej, filename = f2, overwrite = TRUE)
-    
+    # Binary maps
+    pre[pre != 0] <-1
+    writeRaster(pre, filename = paste0(newdir,'/','bin_',f), overwrite=TRUE) 
   }
+  options(warn=0)
 }
-
-
-Pixel_area <- function(sta, lon, lat) {
-  
-  ext           <- extent(lon[1], lon[2], lat[1], lat[2])
-  sta           <- crop(sta, ext)
-  sta[sta == 0] <- NA
-  crs(sta)      <- CRS("+proj=longlat +datum=WGS84")
-  
-  for(i in seq_along(1:length(names(sta)))){
-    asc <- sta[[i]]
-    f <- paste0(names(asc))
-    area <- sum(values(area(asc))[!is.na(values(asc))])
-    cat("The area of", f, "is", area, "km2", fill=TRUE)
-  }
-}
-
