@@ -35,7 +35,7 @@ Example of the files structure:
 - README.md
 
 
-If you want to replicate the maps or other plots of the paper, contact to Luis Enrique Angeles-González (luis.angeles0612@gmail.com) or Josymar Torrejón Magallanes (ejosymart@gmail.com).
+If you want to replicate the maps or other plots of the paper, contact to Luis Enrique Angeles-González (luis.angeles0612@gmail.com) or Josymar Torrejón-Magallanes (ejosymart@gmail.com).
 
 For Mac users: Before install the kuenm package, follow these instructions to install Xcode on your Mac: https://clanfear.github.io/CSSS508/docs/compiling.html
 Xcode will replace RTools.
