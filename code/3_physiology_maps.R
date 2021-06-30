@@ -12,8 +12,7 @@ sta <- raster::stack(sta)
 
 # The inputs are minimum pejus, mean preference, maximum pejus,
 # a stack with rasters where to project thermal preferences and
-# the name of the folder. This folder will be saved in final 
-# models
+# the name of the folder. This folder will be saved in final models.
 
 Temp_fit(pejus_min   = 13, 
          optimum_min = 18, 

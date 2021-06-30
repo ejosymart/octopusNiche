@@ -13,14 +13,19 @@ binary_map <- function(fileSuitability, filePresence, prop, ...){
   int_npoints <- round(nsuits)
   
   if(int_npoints < npoints && npoints > 10){
+    
     thpos <- ceiling(nsuits)
+    
   }else{
+    
     thpos <- int_npoints
+    
   }
+  
   thr <- suits[thpos]
   
   model[model < thr] <- 0
-  model[model != 0] <- 1 
+  model[model != 0]  <- 1 
   
   return(list(model = model, threshold = thr))
 }
@@ -37,8 +42,10 @@ bin_scenarios <- function(binmodel, stack_files_RCP, folder_name){
   
   #Bin according threshold
   for(i in 1:dim(stack_files_RCP)[3]){
+    
     stack_files_RCP[[i]][stack_files_RCP[[i]] < threshold] <- 0
-    stack_files_RCP[[i]][stack_files_RCP[[i]] != 0] <- 1 
+    stack_files_RCP[[i]][stack_files_RCP[[i]] != 0]        <- 1 
+    
     writeRaster(x = stack_files_RCP[[i]], filename = paste0(names(stack_files_RCP)[[i]], "_bin.asc"))
   }
   
@@ -63,18 +70,20 @@ Temp_fit <- function(pejus_min, optimum_min, mean, optimum_max, pejus_max, stack
  
   # Projection
   for(i in 1:length(names(stack))){
+    
     # Suitability maps
     f   <- paste0(names(stack[[i]]), '.asc')
     ras <- stack[[i]] 
     names(ras)   <- 'tem'
     pre <- predict(ras, gam_fit, family=gaussian, type="response", scale=TRUE)
     pre[pre < 0] <- 0
-    pre <- pre/pre@data@max #relativizing values
+    pre <- pre/pre@data@max #relative values
     writeRaster(pre, filename = paste0(newdir,'/',f), overwrite=TRUE) 
     
     # Binary maps
     pre[pre != 0] <-1
     writeRaster(pre, filename = paste0(newdir,'/','bin_',f), overwrite=TRUE) 
+    
   }
   options(warn=0)
 }

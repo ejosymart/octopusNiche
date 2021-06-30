@@ -62,8 +62,8 @@ cal_eval <- kuenm_ceval(path          = out_dir,
                         selection     = selection, 
                         parallel.proc = paral_proc)
 
-### To replicate the results select only the model of the first row of the
-### best_candidate_models_OR_AICc.csv (delete the second row)
+# To replicate the results select only the model of the first row of the
+# best_candidate_models_OR_AICc.csv (delete the second row)
 
 
 
@@ -117,8 +117,8 @@ sets_var <- "Set1" # here a vector of various sets can be used
 out_mop  <- "MOP_results"
 percent  <- 5
 paral    <- FALSE # make this true to perform MOP calculations in parallel, recommended
-               # only if a powerfull computer is used (see function's help)
-# Two of the variables used here as arguments were already created for previous functions
+                  # only if a powerfull computer is used (see function's help).
+# Two of the variables used here as arguments were already created for previous functions.
 
 
 kuenm_mmop(G.var.dir = G_var_dir, 
