@@ -1,7 +1,7 @@
 # octopusNiche
 Code and data input to replicate the article "Climate change effect on Octopus maya (Voss and Solís-Ramírez, 1966) suitability and distribution in the Yucatan Peninsula, Gulf of Mexico: A correlative and mechanistic approach".
 
-In order to replicate the results, open the octopusNiche.Rproj and you have to follow the order provided in the code folder:
+In order to replicate the results of this study, open the octopusNiche.Rproj and follow the order provided in the code folder:
 
 * 0) 0_auxiliar_functions.R (You do not need to run this code. It will be called from the following scripts).
 
