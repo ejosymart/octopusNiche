@@ -5,8 +5,7 @@
 [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.6-6666ff.svg)](https://cran.r-project.org/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 [![Last-changedate](https://img.shields.io/badge/last%20change-2021--07--12-yellowgreen.svg)](/commits/master)
-![GitHub Contributors Image](https://contrib.rocks/image?repo=ejosymart/octopusNiche)
-
+`r badge_doi("10.1016/j.ecss.2021.107502", "yellow")`
 <!-- badges: end -->
 
 # octopusNiche
