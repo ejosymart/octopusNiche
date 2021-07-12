@@ -1,7 +1,11 @@
 <br>
 
 <!-- badges: start -->
+[![Project Status: Active The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.6-6666ff.svg)](https://cran.r-project.org/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2021--07--12-yellowgreen.svg)](/commits/master)
+![GitHub Contributors Image](https://contrib.rocks/image?repo=ejosymart/octopusNiche)
 
 <!-- badges: end -->
 
