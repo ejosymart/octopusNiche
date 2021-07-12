@@ -1,5 +1,5 @@
 # octopusNiche
-Code and data input to replicate the article "Climate change effect on Octopus maya (Voss and Solís-Ramírez, 1966) suitability and distribution in the Yucatan Peninsula, Gulf of Mexico: A correlative and mechanistic approach".
+Code and data to replicate the article "Climate change effect on Octopus maya (Voss and Solís-Ramírez, 1966) suitability and distribution in the Yucatan Peninsula, Gulf of Mexico: A correlative and mechanistic approach".
 
 In order to replicate the results of this study, open the octopusNiche.Rproj and follow the order provided in the code folder:
 
@@ -13,12 +13,12 @@ In order to replicate the results of this study, open the octopusNiche.Rproj and
 
 All the scripts have comments for an easy understanding of the process.
 
-Nevertheless, you need to download maxent software from: https://biodiversityinformatics.amnh.org/open_source/maxent/. After that **you have to create a folder named maxent**, inside this folder there will be: **maxent.bat, maxent.jar, maxent.sh, readme.txt**.
+Nevertheless, you must download maxent software from: https://biodiversityinformatics.amnh.org/open_source/maxent/. After that, **you have to create a folder named maxent**, inside this folder there will be: **maxent.bat, maxent.jar, maxent.sh, readme.txt**.
 
-Also, you need to install *kuenm* package. Please follow the instructions provided in this link: https://github.com/marlonecobos/kuenm
+Also, you need to install *kuenm* package. Please follow the instructions provided in this link: https://github.com/marlonecobos/kuenm#installing-the-package
 
 
-Example of the files structure:
+The file structure of this project is:
 
 - code
 
