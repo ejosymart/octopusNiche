@@ -50,3 +50,8 @@ For Mac users: Before install the kuenm package, follow these instructions to in
 Xcode will replace RTools.
 
 If you find any problem in the code, please add this at the Issues section of the github.
+
+
+## Reference
+
+Ángeles-González, L. E., Martínez-Meyer, E., Yañez-Arenas, C., Velázquez-Abunader, I., López-Rocha, J. A., Torrejón-Magallanes, J., & Rosas, C. (2021). Climate change effect on Octopus maya (Voss and Solís-Ramírez, 1966) suitability and distribution in the Yucatan Peninsula, Gulf of Mexico: A correlative and mechanistic approach. *Estuarine, Coastal and Shelf Science, 107502*.
